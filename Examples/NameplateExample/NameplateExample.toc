@@ -1,0 +1,7 @@
+## Interface: 120000
+## Title: Nameplate Example
+## Notes: Example addon demonstrating how to get nameplate information from NPCs
+## Author: Example
+## Version: 1.0.0
+
+NameplateExample.lua
