@@ -190,11 +190,8 @@ NameplateExample:SetScript("OnEvent", function(self, event, ...)
         -- This demonstrates Method 2 from the guide
         local nameplates = C_NamePlate.GetNamePlates(issecure())
         for _, namePlateFrame in pairs(nameplates) do
-            -- Access unit token via the frame
-            local unitToken = namePlateFrame.namePlateUnitToken
-            if not unitToken and namePlateFrame.UnitFrame then
-                unitToken = namePlateFrame.UnitFrame.unit
-            end
+            -- Access unit token via GetUnit() method
+            local unitToken = namePlateFrame:GetUnit()
             
             if unitToken and UnitExists(unitToken) then
                 OnNamePlateAdded(unitToken)

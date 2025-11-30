@@ -57,8 +57,8 @@ You can iterate through all currently active nameplates:
 local nameplates = C_NamePlate.GetNamePlates(issecure())
 
 for _, namePlateFrame in pairs(nameplates) do
-    -- Get the unit token from the nameplate's base frame
-    local unitToken = namePlateFrame.namePlateUnitToken or namePlateFrame:GetUnit()
+    -- Get the unit token from the nameplate frame using GetUnit()
+    local unitToken = namePlateFrame:GetUnit()
     
     if unitToken then
         -- Check if it's visible
